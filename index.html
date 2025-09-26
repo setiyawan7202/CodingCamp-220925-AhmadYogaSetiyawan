@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- MODAL INPUT NAMA -->
+    <div id="nameModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white p-8 rounded shadow-lg w-80 animate-fadeIn">
+            <h2 class="text-xl font-bold mb-4 text-center">Masukkan Nama Anda</h2>
+            <input id="inputName" type="text" class="border rounded w-full py-2 px-3 mb-4" placeholder="Nama Anda">
+            <button id="submitName" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full transition duration-200">Submit</button>
+        </div>
+    </div>
+    <!-- HEADER CONTENT -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+        <!-- LOGO -->
+        <div class="flex items-center gap-3">
+          <img class="w-12 h-12 rounded-full border-2 border-blue-500 shadow" src="../img/logo.png" alt="logo">
+          <span class="text-2xl font-extrabold text-blue-600 tracking-wide">My Portfolio</span>
+        </div>
+        <!-- NAVIGATION MENU -->
+        <nav class="relative">
+          <!-- Hamburger Button -->
+          <button id="navToggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none" aria-label="Open Menu">
+            <span class="block w-8 h-1 bg-blue-600 rounded transition-all duration-300 mb-1"></span>
+            <span class="block w-8 h-1 bg-blue-600 rounded transition-all duration-300 mb-1"></span>
+            <span class="block w-8 h-1 bg-blue-600 rounded transition-all duration-300"></span>
+          </button>
+          <!-- Menu List -->
+          <ul id="navMenu" class="fixed inset-0 bg-white bg-opacity-95 flex flex-col items-center justify-center gap-8 text-xl font-semibold hidden md:static md:flex md:flex-row md:gap-2 md:bg-transparent md:h-auto md:w-auto md:text-base md:font-medium md:items-center md:justify-end transition-all duration-300">
+            <li><a class="block px-6 py-2 rounded hover:bg-blue-100 hover:text-blue-700 transition duration-200" href="#home">Home</a></li>
+            <li><a class="block px-6 py-2 rounded hover:bg-blue-100 hover:text-blue-700 transition duration-200" href="#about">About</a></li>
+            <li><a class="block px-6 py-2 rounded hover:bg-blue-100 hover:text-blue-700 transition duration-200" href="#projects">Projects</a></li>
+            <li><a class="block px-6 py-2 rounded hover:bg-blue-100 hover:text-blue-700 transition duration-200" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 via-white to-blue-200 animate-fadeIn">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-blue-700 animate-fadeInDown" id="welcomeText">Welcome to My Portfolio</h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-8 animate-fadeInUp">Discover my projects, skills, and journey as a developer.</p>
+            <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-200 animate-bounce">See My Projects</a>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="min-h-screen flex flex-col justify-center items-center bg-white animate-fadeIn">
+            <h2 class="text-3xl font-bold mb-4 text-blue-700 animate-fadeInDown">About Me</h2>
+            <p class="text-lg max-w-2xl text-center text-gray-700 animate-fadeInUp">
+                Hi! I'm <span class="font-semibold text-blue-600">Ahmad Yoga Setiyawan</span>, a passionate web developer with a love for clean code and creative design. I enjoy building interactive, user-friendly websites and learning new technologies. Let's connect and create something amazing together!
+            </p>
+            <div class="flex gap-8 mt-8">
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl text-blue-500 mb-2">💻</span>
+                    <span class="font-semibold">Web Development</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl text-yellow-500 mb-2">🎨</span>
+                    <span class="font-semibold">UI/UX Design</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl text-green-500 mb-2">🚀</span>
+                    <span class="font-semibold">Continuous Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 via-white to-blue-100 animate-fadeIn">
+            <h2 class="text-3xl font-bold mb-4 text-blue-700 animate-fadeInDown">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+                <!-- Example Project Card -->
+                <div class="bg-white border border-blue-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 animate-fadeInUp">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-600">Personal Portfolio</h3>
+                    <p class="text-base text-gray-700 mb-4">A responsive portfolio website to showcase my skills, projects, and contact information. Built with HTML, CSS, Tailwind, and JavaScript.</p>
+                    <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="min-h-screen flex flex-col justify-center items-center bg-white animate-fadeIn">
+            <h2 class="text-3xl font-bold mb-4 text-blue-700 animate-fadeInDown">Contact Me</h2>
+            <div class="flex flex-col md:flex-row gap-8 w-full max-w-4xl">
+                <form class="w-full max-w-lg bg-blue-50 p-6 rounded-xl shadow animate-fadeInLeft" id="contactForm" autocomplete="off">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="contactName">Name</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="contactName" type="text" placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="contactEmail">Email</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="contactEmail" type="email" placeholder="Your Email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="contactMessage">Message</label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="contactMessage" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200" type="submit">Send</button>            
+                    </div>
+                </form>
+                <!-- Kotak Preview Detail -->
+                <div class="w-full max-w-lg bg-white rounded-xl shadow p-6 h-fit animate-fadeInRight">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-700">Preview Detail</h3>
+                    <div id="previewDetail" class="text-gray-700 space-y-2">
+                        <p><span class="font-bold">Name:</span> <span id="previewName">-</span></p>
+                        <p><span class="font-bold">Email:</span> <span id="previewEmail">-</span></p>
+                        <p><span class="font-bold">Message:</span> <span id="previewMessage">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER CONTENT -->
+    <footer>
+        <div class="text-center p-4 bg-blue-700 text-white animate-fadeInUp">
+            &copy; 2025 Setiyawan. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    
+    <style>
+        /* Animasi custom */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px);} to { opacity: 1; transform: translateY(0);} }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);} }
+        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px);} to { opacity: 1; transform: translateX(0);} }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px);} to { opacity: 1; transform: translateX(0);} }
+        .animate-fadeIn { animation: fadeIn 1s; }
+        .animate-fadeInDown { animation: fadeInDown 1s; }
+        .animate-fadeInUp { animation: fadeInUp 1s; }
+        .animate-fadeInLeft { animation: fadeInLeft 1s; }
+        .animate-fadeInRight { animation: fadeInRight 1s; }
+        /* Hamburger animasi */
+        #navToggle.open span:nth-child(1) {
+            transform: rotate(45deg) translateY(8px);
+        }
+        #navToggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+        #navToggle.open span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-8px);
+        }
+        #navMenu {
+            transition: all 0.3s;
+        }
+        @media (min-width: 768px) {
+            #navMenu {
+                position: static !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                width: auto !important;
+                height: auto !important;
+                flex-direction: row !important;
+                gap: 1rem !important;
+            }
+        }
+    </style>
+</body>
+</html>
